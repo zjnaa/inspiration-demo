@@ -195,6 +195,12 @@ export function Home() {
             <button className="w-7 h-7 rounded-[6px] bg-[rgba(136,136,136,0.10)] flex items-center justify-center hover:bg-[rgba(136,136,136,0.15)] transition-colors text-gray-700">
               <Search size={14} strokeWidth={1.8} />
             </button>
+            <button
+              className="w-7 h-7 rounded-[6px] bg-[rgba(136,136,136,0.10)] flex items-center justify-center hover:bg-[rgba(136,136,136,0.15)] transition-colors text-gray-700"
+              title="新建主题"
+            >
+              <Plus size={14} strokeWidth={1.8} />
+            </button>
           </div>
         </header>
 
