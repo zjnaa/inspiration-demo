@@ -210,6 +210,19 @@ export function Home() {
           style={{ scrollbarGutter: "stable" }}
         >
           <div className="flex flex-col items-center w-full py-10 gap-10">
+            <p
+              style={{
+                fontSize: "13px",
+                lineHeight: "20px",
+                color: "#8A8A8A",
+                fontWeight: 400,
+                letterSpacing: "0.2px",
+                textAlign: "center",
+                margin: 0,
+              }}
+            >
+              Turn scattered inspiration into evolving topics
+            </p>
             <TopicCluster
               onAddMaterial={handleAddMaterial}
               onSelect={handleSelectTopic}
