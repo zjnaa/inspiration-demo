@@ -113,29 +113,29 @@ export function Home() {
   const [tasks, setTasks] = useState<SearchTask[]>([
     {
       id: 1,
-      topic: "Multi-Agent 编排",
-      originalText: "给「Multi-Agent 编排」补充素材",
+      topic: "RAG 检索增强生成",
+      originalText: "给「RAG 检索增强生成」补充素材",
       status: "done",
       timestamp: now - 18 * 1000,
       phase: PHASES.length,
-      result: "已拉取 12 条相关协作会话记录",
+      result: "已汇总 12 篇 RAG 工程化实践与 benchmark 资料",
       items: [
-        { type: "文档", title: "Multi-Agent 编排 · 产品设计文档 v2.3", source: "Notion / 产品组", time: "2 天前" },
-        { type: "会话", title: "Multi-Agent 工作流评审会议记录", source: "飞书妙记", time: "5 小时前" },
-        { type: "规范", title: "Multi-Agent 接口规范与字段定义", source: "内部 Wiki", time: "昨天" },
+        { type: "文档", title: "RAG 检索增强生成 · 端到端架构设计 v2.3", source: "Notion / 算法组", time: "2 天前" },
+        { type: "会话", title: "RAG 召回率与重排策略评审会议", source: "飞书妙记", time: "5 小时前" },
+        { type: "规范", title: "Embedding 切分与索引规范", source: "内部 Wiki", time: "昨天" },
       ],
     },
     {
       id: 2,
-      topic: "设计系统 3.0",
-      originalText: "给「设计系统 3.0」补充素材",
+      topic: "MCP 模型上下文协议",
+      originalText: "给「MCP 模型上下文协议」补充素材",
       status: "done",
       timestamp: now - 23 * 1000,
       phase: PHASES.length,
-      result: "已汇总 7 份团队设计规范与组件库链接",
+      result: "已汇总 7 份 MCP Server 接入与最佳实践文档",
       items: [
-        { type: "规范", title: "设计系统 3.0 · Token 与配色规范", source: "Figma Library", time: "1 周前" },
-        { type: "文档", title: "设计系统 3.0 · 组件清单", source: "语雀", time: "3 天前" },
+        { type: "规范", title: "MCP · Tool / Resource / Prompt 接入规范", source: "Anthropic Docs", time: "1 周前" },
+        { type: "文档", title: "公司内部 MCP Server 清单与对接说明", source: "语雀", time: "3 天前" },
       ],
     },
   ]);
@@ -204,14 +204,6 @@ export function Home() {
           style={{ scrollbarGutter: "stable" }}
         >
           <div className="flex flex-col items-center w-full py-10 gap-10">
-            <div className="flex flex-col items-center">
-              <p className="text-[14px] text-gray-500 mb-3">创建你的灵感主题</p>
-              <button className="flex items-center gap-1.5 h-9 px-4 rounded-full bg-gradient-to-r from-sky-500 to-sky-400 hover:from-sky-400 hover:to-sky-500 text-white text-[14px] font-medium shadow-[0_6px_14px_-4px_rgba(14,165,233,0.5)]">
-                <Plus size={16} strokeWidth={2.2} />
-                <span>添加主题</span>
-              </button>
-            </div>
-
             <TopicCluster
               onAddMaterial={handleAddMaterial}
               onSelect={handleSelectTopic}

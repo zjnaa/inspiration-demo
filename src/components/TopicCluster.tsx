@@ -38,23 +38,23 @@ const LAYOUT: { rotate: number; offsetX: number; offsetY: number; z: number }[] 
 
 const RAW_DATA: CardLayout[] = [
   // 第 1 屏
-  { id: "t-1", title: "视觉叙事系统", subtitle: "从故事板到动态海报，构建一致的品牌视觉语言与叙事节奏", palette: "blue", ...LAYOUT[0], count: 18, time: "12:00", isMine: true },
-  { id: "t-2", title: "产品设计语言", subtitle: "面向 Web 与移动端的组件规范、交互模式与动效标准", palette: "green", ...LAYOUT[1], count: 15, time: "14:20" },
-  { id: "t-3", title: "企业知识问答工作台", subtitle: "面向 RAG 与 Agent 的知识库结构、检索策略与工程落地实践", palette: "yellow", ...LAYOUT[2], count: 22, time: "09:45" },
-  { id: "t-4", title: "设计系统 3.0", subtitle: "从 token 到组件到文档的全链路视觉与交互规范建设", palette: "orange", ...LAYOUT[3], count: 16, time: "16:05", isMine: true },
-  { id: "t-5", title: "插画与角色设计", subtitle: "品牌角色、插画风格、表情包与应用场景的统一视觉资产库", palette: "blue", ...LAYOUT[4], count: 12, time: "20:30" },
-  { id: "t-6", title: "多智能体协作", subtitle: "任务拆解、工具调用与 Agent 间通信的编排与评估体系", palette: "green", ...LAYOUT[5], count: 20, time: "11:10" },
-  { id: "t-7", title: "产品发布文档", subtitle: "Release Notes、更新公告与用户引导文案的模板与发布流程", palette: "orange", ...LAYOUT[6], count: 9, time: "15:40" },
-  { id: "t-8", title: "知识图谱构建", subtitle: "从非结构化语料到结构化图谱的端到端知识建模与维护", palette: "blue", ...LAYOUT[7], count: 24, time: "10:15" },
+  { id: "t-1", title: "RAG 检索增强生成", subtitle: "从分块、向量化到混合检索与重排，构建可落地的企业问答管线", palette: "blue", ...LAYOUT[0], count: 28, time: "12:00", isMine: true },
+  { id: "t-2", title: "Multi-Agent 编排", subtitle: "任务拆解、工具调用与 Agent 间通信的编排框架与评估体系", palette: "green", ...LAYOUT[1], count: 22, time: "14:20" },
+  { id: "t-3", title: "MCP 模型上下文协议", subtitle: "Anthropic 主导的开放协议，统一工具、资源与提示词的接入方式", palette: "yellow", ...LAYOUT[2], count: 35, time: "09:45" },
+  { id: "t-4", title: "Reasoning Model 推理模型", subtitle: "o3 / DeepSeek R1 路线，长思维链、自我反思与 test-time compute", palette: "orange", ...LAYOUT[3], count: 31, time: "16:05", isMine: true },
+  { id: "t-5", title: "Function Calling 工具调用", subtitle: "结构化输出、JSON Schema 与并行工具调用的工程化实践", palette: "blue", ...LAYOUT[4], count: 19, time: "20:30" },
+  { id: "t-6", title: "LoRA / QLoRA 高效微调", subtitle: "参数高效微调技术栈、数据配比与显存优化的实战经验", palette: "green", ...LAYOUT[5], count: 24, time: "11:10" },
+  { id: "t-7", title: "Long Context 长上下文", subtitle: "百万 token 上下文窗口、KV Cache 压缩与大海捞针评估方法", palette: "orange", ...LAYOUT[6], count: 17, time: "15:40" },
+  { id: "t-8", title: "Vector Database 向量数据库", subtitle: "Milvus、Qdrant、pgvector 选型，HNSW 索引与混合检索策略", palette: "blue", ...LAYOUT[7], count: 26, time: "10:15" },
   // 第 2 屏
-  { id: "t-9", title: "品牌 VI 管理", subtitle: "Logo、色彩、字体到应用场景的品牌资产库与使用规范", palette: "green", ...LAYOUT[0], count: 14, time: "13:25" },
-  { id: "t-10", title: "深色模式适配", subtitle: "对比度、层级、语义色彩与跨平台渲染的深色模式规范", palette: "orange", ...LAYOUT[1], count: 11, time: "21:00" },
-  { id: "t-11", title: "数据可视化主题", subtitle: "图表类型选型、颜色映射到信息层级的可视化设计规范", palette: "yellow", ...LAYOUT[2], count: 19, time: "17:45" },
-  { id: "t-12", title: "营销内容生产", subtitle: "从海报、短视频到 H5 的素材库与创意变体管理", palette: "green", ...LAYOUT[3], count: 13, time: "19:20", isMine: true },
-  { id: "t-13", title: "对话式工作流", subtitle: "对话入口、指令解析、结果呈现到用户反馈的端到端流程", palette: "blue", ...LAYOUT[4], count: 17, time: "08:50" },
-  { id: "t-14", title: "运营物料管理", subtitle: "Banner、封面图、卡片与物料组件的统一设计规范与复用", palette: "orange", ...LAYOUT[5], count: 21, time: "22:10" },
-  { id: "t-15", title: "业务指标看板", subtitle: "指标体系、卡片布局、数据故事化表达与看板建设流程", palette: "yellow", ...LAYOUT[6], count: 16, time: "14:55" },
-  { id: "t-16", title: "组件库建设", subtitle: "从设计规范到代码落地的 UI Kit 建设、维护与升级策略", palette: "orange", ...LAYOUT[7], count: 23, time: "07:30", isMine: true },
+  { id: "t-9", title: "Coding Agent 代码助手", subtitle: "Claude Code、Cursor、Devin 背后的代码理解与多步执行架构", palette: "green", ...LAYOUT[0], count: 33, time: "13:25" },
+  { id: "t-10", title: "MoE 混合专家", subtitle: "DeepSeek-V3、Mixtral 的稀疏激活路由与专家并行训练策略", palette: "orange", ...LAYOUT[1], count: 21, time: "21:00" },
+  { id: "t-11", title: "Multimodal 多模态大模型", subtitle: "视觉、语音、视频的统一表征与 GPT-4o 级别端到端建模", palette: "yellow", ...LAYOUT[2], count: 29, time: "17:45" },
+  { id: "t-12", title: "Prompt Engineering", subtitle: "CoT、Few-shot、ReAct 等提示模式与系统提示词工程化管理", palette: "green", ...LAYOUT[3], count: 25, time: "19:20", isMine: true },
+  { id: "t-13", title: "RLHF / DPO 偏好对齐", subtitle: "PPO、DPO 到 GRPO，奖励模型与离线对齐方法的演进路线", palette: "blue", ...LAYOUT[4], count: 18, time: "08:50" },
+  { id: "t-14", title: "vLLM 推理优化", subtitle: "PagedAttention、连续批处理与投机解码的高吞吐部署实践", palette: "orange", ...LAYOUT[5], count: 27, time: "22:10" },
+  { id: "t-15", title: "LLM Evaluation 评估体系", subtitle: "MMLU、HumanEval 到 LiveBench，自动化评测与人工对战榜单", palette: "yellow", ...LAYOUT[6], count: 20, time: "14:55" },
+  { id: "t-16", title: "Computer Use Agent", subtitle: "屏幕理解、GUI 操作与浏览器自动化，让 LLM 像人一样用电脑", palette: "orange", ...LAYOUT[7], count: 32, time: "07:30", isMine: true },
 ];
 
 interface Props {
