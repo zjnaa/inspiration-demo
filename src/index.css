@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+    "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* —— 防止滚动条出现/消失导致布局晃动 —— */
+/* 1) 在任何可能滚动的区域，预留稳定的滚动条空间 */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* 2) 细滚动条样式（webkit & firefox） */
+.scroll-area,
+* {
+  scrollbar-gutter: stable;
+}
+.scroll-area::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+.scroll-area::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-area::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.scroll-area::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
+}
+.scroll-area,
+* {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.7); }
+  100% { opacity: 1; transform: scale(1); }
+}
