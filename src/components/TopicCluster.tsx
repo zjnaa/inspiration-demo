@@ -153,7 +153,7 @@ export function TopicCluster({ onAddMaterial, onSelect, selectedTopic }: Props) 
 
         <div
           className="relative origin-center"
-          style={{ width: "750px", height: "315px", transform: "scale(0.85)" }}
+          style={{ width: "750px", height: "315px", transform: "scale(1)" }}
         >
           {cards.map((card) => {
             const isHover = hoverId === card.id;
