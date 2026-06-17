@@ -26,14 +26,14 @@ interface CardLayout {
 
 // 统一的花瓣式坐标排布（8 张一组，两屏复用，保证视觉均衡）
 const LAYOUT: { rotate: number; offsetX: number; offsetY: number; z: number }[] = [
-  { rotate: 6, offsetX: -295, offsetY: -44, z: 1 },
-  { rotate: -29, offsetX: -231, offsetY: 71, z: 2 },
-  { rotate: -49, offsetX: -109, offsetY: -47, z: 3 },
-  { rotate: 0, offsetX: 13, offsetY: -84, z: 4 },
-  { rotate: 37, offsetX: 297, offsetY: 0, z: 5 },
-  { rotate: -17, offsetX: 179, offsetY: -57, z: 6 },
-  { rotate: 17, offsetX: 187, offsetY: 79, z: 7 },
-  { rotate: -18, offsetX: -39, offsetY: 82, z: 8 },
+  { rotate: 6, offsetX: -265, offsetY: -50, z: 1 },
+  { rotate: -29, offsetX: -210, offsetY: 45, z: 2 },
+  { rotate: -49, offsetX: -100, offsetY: -55, z: 3 },
+  { rotate: 0, offsetX: 12, offsetY: -65, z: 4 },
+  { rotate: 37, offsetX: 268, offsetY: 0, z: 5 },
+  { rotate: -17, offsetX: 160, offsetY: -45, z: 6 },
+  { rotate: 17, offsetX: 170, offsetY: 55, z: 7 },
+  { rotate: -18, offsetX: -35, offsetY: 55, z: 8 },
 ];
 
 const RAW_DATA: CardLayout[] = [
@@ -100,7 +100,7 @@ export function TopicCluster({ onAddMaterial, onSelect, selectedTopic }: Props) 
       {/* 卡片堆叠容器：扩大高度让整组在 flex 布局中上下居中 */}
       <div
         className="relative w-full flex items-center justify-center flex-1"
-        style={{ maxWidth: "750px", minHeight: "320px" }}
+        style={{ maxWidth: "750px", minHeight: "500px" }}
       >
         {/* 左翻页箭头：属于卡片区域，贴近卡片边缘 */}
         <button
@@ -153,7 +153,7 @@ export function TopicCluster({ onAddMaterial, onSelect, selectedTopic }: Props) 
 
         <div
           className="relative origin-center"
-          style={{ width: "750px", height: "315px", transform: "scale(1)" }}
+          style={{ width: "750px", height: "500px", transform: "scale(1)" }}
         >
           {cards.map((card) => {
             const isHover = hoverId === card.id;
