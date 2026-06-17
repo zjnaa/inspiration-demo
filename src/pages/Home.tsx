@@ -4,6 +4,8 @@ import { Sidebar } from "../components/Sidebar";
 import { TopicCluster } from "../components/TopicCluster";
 import { ChatInput } from "../components/ChatInput";
 
+const BASE = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
+
 // 子阶段描述：一个完整的补素材流程会按顺序经过这些步骤
 const PHASES: { label: string; duration: number }[] = [
   { label: "解析主题关键词并匹配知识域", duration: 700 },
@@ -187,7 +189,7 @@ export function Home() {
           <h1 className="text-[14px] font-medium text-[#1a1a1a]">灵感主题</h1>
           <div className="flex items-center gap-2">
             <button className="flex items-center gap-1.5 h-7 px-3 rounded-[6px] bg-[rgba(136,136,136,0.10)] text-[13px] font-medium text-[#1a1a1a] hover:bg-[rgba(136,136,136,0.15)] transition-colors">
-              <img src="/icon_summary.svg" width="14" height="14" alt="查看素材库" />
+              <img src={`${BASE}/icon_summary.svg`} width="14" height="14" alt="查看素材库" />
               <span>查看素材库</span>
             </button>
             <button className="w-7 h-7 rounded-[6px] bg-[rgba(136,136,136,0.10)] flex items-center justify-center hover:bg-[rgba(136,136,136,0.15)] transition-colors text-gray-700">
@@ -243,7 +245,7 @@ export function Home() {
                     gap: "10px",
                   }}
                 >
-                  <img src="/icon_text_editor.svg" width="22" height="22" alt="素材搜寻" style={{ flexShrink: 0 }} />
+                  <img src={`${BASE}/icon_text_editor.svg`} width="22" height="22" alt="素材搜寻" style={{ flexShrink: 0 }} />
 
                   <span
                     className="shrink-0"

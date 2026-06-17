@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Image, Moon } from "lucide-react";
 
+const BASE = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
+
 const navItems = [
-  { key: "task", label: "任务", iconSrc: "/icon_task.svg" },
-  { key: "team", label: "协作", iconSrc: "/icon_team.svg" },
-  { key: "inspiration", label: "灵感", active: true, iconSrc: "/icon_inspiration.svg" },
+  { key: "task", label: "任务", iconSrc: `${BASE}/icon_task.svg` },
+  { key: "team", label: "协作", iconSrc: `${BASE}/icon_team.svg` },
+  { key: "inspiration", label: "灵感", active: true, iconSrc: `${BASE}/icon_inspiration.svg` },
 ];
 
 export function Sidebar() {
@@ -14,7 +16,7 @@ export function Sidebar() {
     <aside className="flex flex-col items-center w-[56px] h-full bg-[#f5f5f5] border-r border-gray-200 py-3 shrink-0">
       {/* 顶部 Logo（40x40） */}
       <div className="mb-4">
-        <img src="/icon_40.svg" width="40" height="40" className="block" alt="logo" />
+        <img src={`${BASE}/icon_40.svg`} width="40" height="40" className="block" alt="logo" />
       </div>
 
       {/* 导航项 —— 44x44，圆角 6px，激活态背景 rgba(136,136,136,0.10)，垂直居中 */}

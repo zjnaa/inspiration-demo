@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState, KeyboardEvent } from "react";
 import { Plus, X } from "lucide-react";
 
+const BASE = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
+
 interface Props {
   onSubmit?: (text: string) => void;
   selectedTopic?: string | null;
@@ -112,7 +114,7 @@ export function ChatInput({ onSubmit, selectedTopic, onClearTopic }: Props) {
             : "opacity-60 cursor-not-allowed")
         }
       >
-        <img src="/icon_send.svg" width="36" height="36" alt="发送" />
+        <img src={`${BASE}/icon_send.svg`} width="36" height="36" alt="发送" />
       </button>
     </div>
   );
